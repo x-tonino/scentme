@@ -1,0 +1,513 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'lato', sans-serif;
+
+}
+
+body {
+    width: 100%;
+    font-size: 10px;
+    background: white;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background: #ebebeb;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+
+
+body, html {
+    width: 100%;
+    font-size: 10px;
+    background: black;
+    font-family: cursive;
+    overflow: auto;
+}
+
+.home {
+    height: 100vh;
+    width: 100%;
+    background:  black;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+
+}
+
+.home-overlay {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    pointer-events: none;
+}
+
+.o {
+    background: #ed145b;
+    width: 33.4%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.images {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.big-circle {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    animation: bigcircle 1.1s ease alternate infinite;
+}
+
+@keyframes bigcircle {
+    to {
+        width: 32%;
+    }
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+.small-circle {
+    width: 25%;
+    position: absolute;
+    right: 0;
+    animation: smallcircle 1s ease alternate infinite;
+}
+
+@keyframes smallcircle {
+    to {
+        width: 27%;
+    }
+}
+
+header {
+    line-height: 50px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10;
+}
+
+.logo {
+    color: #ed145b;
+    font-size: calc(100% + 60%);
+    font-weight: 800;
+
+}
+
+.logo span {
+    color: white;
+}
+
+nav {
+    z-index: 11;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: calc(100% + 40%);
+    font-weight: 600;
+    padding-right: 20px;
+    transition: .8s;
+}
+
+nav a:hover {
+    color: black;
+}
+nav a:active {
+    color: black;
+}
+
+.text {
+    color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.text .inner-text {
+    margin: 0 0 0 40px;
+    position: relative;
+}
+
+.text h1 {
+    color: #ed145b;
+}
+
+.suggestion-button {
+    background: #ed145b;
+    padding: 10px 20px;
+    border: 0;
+    margin: 10px 0;
+    color: white;
+    font-weight: 600;
+    transition: .8s;
+    cursor: pointer;
+    outline: none;
+    border-radius: 20px 0 20px 0;
+}
+
+.suggestion-button:hover {
+    box-shadow: 2px 2px 22px #ed145b;
+}
+
+.perfumes {
+    pointer-events: none;
+}
+
+.perfumes:hover {
+    cursor: pointer;
+}
+
+.profile {
+    background: #fff;
+    height: 500px;
+    pointer-events: none;
+    padding: 0px 0 0 0;
+}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    flex-direction: column;
+}
+
+.img-container h2 {
+    color: black;
+    font-size: 14px;
+    font-weight: 800;
+    margin: 20px 0 0 0;
+}
+
+.img-container .profile-img {
+    border-radius: 50%;
+    width: 25%;
+    max-width: 200px;
+    box-shadow: 2px 2px 22px #ff0055;
+    animation: enlarge 1.5s infinite alternate;
+    margin: 20px 0 0 0
+}
+@keyframes enlarge {
+    to {
+        box-shadow: 2px 2px 42px #ed145b
+    }
+}
+
+.img-container p {
+    color: black;
+}
+
+.img-container .heart {
+    animation: heart 1.5s infinite alternate;
+}
+
+.b3 {
+    background: #fff;
+    height: 500px;
+    position: relative;
+    overflow: visible;
+}
+
+
+
+/* .b3::after {
+    content: "";
+    background: red;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    bottom: 0;
+    transform: skewY(-3deg);
+    transform-origin: bottom right;
+}
+
+ */
+
+
+footer {
+    background: black;
+    height: 200px;
+}
+
+
+
+
+
+@media(max-width: 900px) {
+
+    .home {
+        height: 400px
+    }
+
+    .big-circle{
+        width: 50% ;
+    }
+
+    @keyframes bigcircle {
+        to {
+            width: 52%;
+        }
+    }
+
+    .small-circle {
+        width: 45% ;
+    }
+
+    @keyframes smallcircle {
+        to {
+            width: 42%;
+        }
+    }
+
+    nav ul {
+        position: fixed;
+        background: #ffffff;
+        right: -60%;
+        width: 60%;
+        height: 100vh;
+        z-index: 11;
+        padding-top: 80px;
+    }
+
+    nav a {
+        display: flex;
+        justify-content: column;
+        padding-left: 20px;
+        color: black;
+        padding: 10px 20px;
+
+    }
+
+    nav a:hover{
+        background: black ;
+        color: white;
+    }
+
+    .menu {
+        width: 35px;
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .text .inner-text {
+        margin: 0 50px 0 20px;
+        top: 8%;
+    }
+
+    .inner-text h1 {
+        font-size: 330%;
+    }
+
+    .inner-text h4 {
+        font-size: 130%;
+        font-weight: 300;
+    }
+
+    .perfumes {
+        width: 40%;
+        z-index: 10;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .exit {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 20px;
+    cursor: pointer;
+    }
+
+    .img-container p {
+        padding: 10px 10%;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .b2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .b2-inner {
+        width: 351px;
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 350px;
+    }
+
+    .perfume-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 110px;
+        align-items: center;
+        height: 300px;
+        position: relative;
+        overflow: visible;
+        pointer-events: none;
+    }
+
+  .perfume-cover{
+        width: 65px;
+        position: absolute;
+        top: 18.2%;
+        left: 25%;
+
+    }
+
+    .perfume-can{
+        width: 100%;
+
+    }
+
+    .afgano-cover {
+        top: 11%;
+        left: 24%
+    }
+
+
+}
+
+
+
+
+@media(min-width: 901px) {
+
+    .menu, .exit {
+        display: none;
+    }
+
+    .inner-text h1 {
+        font-size: 630%;
+    }
+
+    .inner-text h4 {
+        font-size: 130%;
+        font-weight: 300;
+    }
+
+    .perfumes {
+        width: 28%;
+        z-index: 11;
+        position: absolute;
+        bottom: 0%;
+        right: 0;
+    }
+
+    .img-container p {
+        padding: 10px 20%;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .perfume-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 400px;
+        align-items: center;
+        height: 300px;
+
+        position: relative;
+    }
+
+    .pink-perfume-cover{
+        width: 100px;
+        position: absolute;
+        top: 8%;
+        left: 40%;
+
+    }
+
+    .pink-perfume{
+        width: 170px;
+
+    }
+
+    .b2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .b2-inner {
+        width: 600px;
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 500px;
+    }
+
+    .perfume-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 200px;
+        align-items: center;
+        height: 300px;
+        position: relative;
+        overflow: visible;
+        pointer-events: none;
+    }
+
+  .perfume-cover{
+        width: 100px;
+        position: absolute;
+        top: -4.2%;
+        left: 31%;
+
+    }
+
+    .perfume-can{
+        width: 100%;
+
+    }
+
+    .afgano-cover {
+        top: -5%;
+        left: 28%
+    }
+
+    
+    
+
+}
+
+
